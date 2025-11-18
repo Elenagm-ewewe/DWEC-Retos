@@ -5,6 +5,8 @@ const errEmail = document.getElementById("erroremail");
 const errTlf = document.getElementById("errortlf");
 const errEdad = document.getElementById("erroredad");
 
+
+
 document.getElementById("enviar").addEventListener("click", (e) => {
     e.preventDefault();
     let valido = true;
@@ -93,7 +95,18 @@ document.getElementById("enviar").addEventListener("click", (e) => {
         }
 
         if(valido){
+            
             document.getElementById("valido").innerHTML = `TODO CORRECTO`;
         }
+
+
+        document.getElementById("ski").checked = true
+        
+localStorage.setItem("contador1", 0);
+
+document.getElementById("forfaits").textContent= contador;
+
     });
 
+
+    let contador = document.createElement()
