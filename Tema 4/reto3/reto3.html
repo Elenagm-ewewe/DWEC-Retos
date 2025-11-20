@@ -9,7 +9,7 @@
 
     <h3>Control de producto</h3>
 
-    <form nonvalidate>
+    <form novalidate id="formulario">
 
         <label>Fecha y hora de creación</label>
         <input type="text" id="fechayhora" pattern="^\d{2}\/\d{2}\/[1-2]\d{3} ([0-1]\d|2[0-3]):[0-5][0-9]$"> <span id="errorfechahora"></span>
@@ -19,25 +19,25 @@
         <label>Cocinero</label>
         <input type="text" id="cocinero" pattern="^[A-Z][A-Z][^A-Za-z0-9]\d{4}"> <span id="errorcocinero"></span>
 
-         <br>
+        <br>
 
-         <label>Destinatario</label>
-         <input type="text" id="destinatario" pattern="^[A-Z][A-Z]_[a-z]+:\d{4}$">
+        <label>Destinatario</label>
+        <input type="text" id="destinatario" pattern="^[A-Z][A-Z]_[a-z]+:\d{4}$"> <span id="errordestinatario"></span>
 
-         <br>
+        <br>
 
-         <label>Gramos</label>
-         <input type="text" id="gramos" pattern="^([1-4]\d{3}|5000)$">
+        <label>Gramos</label>
+        <input type="text" id="gramos" pattern="^([1-4]\d{3}|5000)$"> <span id="errorgramos"></span>
 
-         <br>
+        <br>
 
-         <label>Composición</label>
-         <input type="text" id="composicion" pattern="[1-9]+g([A-Z][A-Z]|[A-Z])([A-Z][A-Z]|[A-Z])(\d|)">
+        <label>Composición</label>
+        <input type="text" id="composicion" pattern="^\d+g[A-Z]{1,2}\d?[A-Z]{1,2}\d?$"> <span id="errorcomposicion"></span>
 
         <br>
 
         <label>Número de cuenta</label>
-        <input type="text" id="cuenta">
+        <input type="text" id="cuenta" pattern="^[A-Z]{2}\d{2}-\d{12}-\d{2}">  <span id="errorcuenta"></span>
 
 
 
@@ -45,6 +45,8 @@
 
 
     </form>
+
+    <p id="aceptado"></p>
     
 
 
