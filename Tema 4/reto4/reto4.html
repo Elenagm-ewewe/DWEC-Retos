@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 4</title>
+    <style>
+        form{
+            width: 400px;
+            background-color: rgba(209, 207, 207, 0.658);
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <strong>Contador forfaits:</strong> <span id="contador"></span> <button id="resetcontador">Resetear contador</button>
+    </div>
+    
+    <div>
+        <strong>Contador forfaits del club de ski:</strong> <span id="contadorclub"></span> <button id="resetcontador2">Resetear contador</button>
+    </div>
+
+<form novalidate id="formulario">
+
+    <label for="iden">Identificador</label>
+    <input type="text" id="iden" pattern="[A-Za-z]\d{8}[A-Za-z]">
+    <span id="erroriden"></span>
+
+    <br>
+
+    <label for="nombre">Nombre y apellidos</label>
+    <input type="text" id="nombre">
+    <span id="errornombre"></span>
+
+    <br>
+
+    <label for="fecha">Fecha de nacimiento</label>
+    <input type="text" id="fecha" pattern="^\d{2}/\d{2}/\d{4}$">
+    <span id="errorfecha"></span>
+
+    <br>
+
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email">
+    <span id="erroremail"></span>
+
+    <br>
+
+    <label for="tlf">Teléfono</label>
+    <input type="text" id="tlf" pattern="^\+(\d{3}|\d{2})-\d{9}$">
+    <span id="errortlf"></span>
+
+    <br>
+
+    <label id="edad">Edad</label>
+    <select id="edad">
+        <option value="niño">Niño</option>
+        <option value="adulto">Adulto</option>
+        <option value="jubilado">Jubilado</option>
+    </select>
+
+    <br>
+
+    <label>Club de ski</label>
+    <input type="checkbox" id="ski">
+
+    <br>
+
+    <button id="enviar">Enviar</button>
+
+    <h2 id="valido"></h2>
+
+</form>
+
+<script src="reto4.js"></script>
+
+</body>
+</html>
