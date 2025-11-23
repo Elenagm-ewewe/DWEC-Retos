@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 6</title>
+
+    <style>
+        form{
+            width: 400px;
+            background-color: rgb(214, 245, 241);
+            border-radius: 20px;
+            padding: 1em;
+            box-shadow: 2px 0px 5px 3px rgba(0, 0, 0, 0.24);
+        }
+
+        button{
+            background-color: rgb(28, 182, 243);
+            color: white;
+            appearance: none;
+            border-style: none;
+            padding: 1em;
+            margin-top: 0.5em;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            background-color: rgb(20, 132, 177);
+            cursor: pointer;
+        }
+
+        .contenido div{
+            border-radius: 10px;
+            width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            background-color: rgb(228, 209, 209);
+            margin: 1em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <form id="nuevo">
+        <label>Nombre</label> <br>
+        <input type="text" id="nombre">
+
+        <br>
+        <label>Descripcion</label> <br>
+        <input type="text" id="descripcion">
+
+        <br>
+
+        <label>Imagen</label> <br>
+        <input type="file" id="imagen">
+
+        <br>
+
+        <label>URL</label> <br>
+        <input type="url" id="url">
+
+<br>
+        <button type="submit">Añadir</button>
+
+    </form>
+
+    <div id="contenido" class="contenido"></div>
+
+
+    <script src="reto6.js"></script>
+</body>
+</html>
