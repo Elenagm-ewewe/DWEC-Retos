@@ -1,0 +1,54 @@
+let peliculas = [];
+
+
+document.addEventListener("DOMContentLoaded", async function(){
+
+    await obtenerpeliculas();
+
+    let html = peliculas.map((p) => `<div class="peli"><img src="${p.Poster}"> <h3>${p.Title}</h3> </div>`).join("");
+
+    document.getElementById("peliculas").innerHTML = html
+});
+
+
+document.getElementById("busqueda").addEventListener("input", function(e){
+    e.preventDefault();
+
+    let busqueda=  document.getElementById("busqueda").value;
+
+    let encontradas = peliculas.filter(p => p.Title.toLowerCase().includes(busqueda.toLowerCase()))
+    
+    let html = encontradas.map((p) => `<div class="peli"><img src="${p.Poster}"> <h3>${p.Title}</h3> </div>`).join("");
+
+    document.getElementById("peliculas").innerHTML = html
+
+
+})
+
+
+
+
+
+
+async function obtenerpeliculas() {
+
+    let llamada= [];
+
+    try {
+
+        for(let i = 1 ; i <= 10 ;i++){
+        const respuesta = await fetch(
+            `https://www.omdbapi.com/?s=movie&y=2025&page=${i}&apikey=609c0a2`
+        );
+        let lista = await respuesta.json();
+
+        peliculas.push(...lista.Search);
+
+    }
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
+
+    
+}
