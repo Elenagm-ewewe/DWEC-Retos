@@ -68,6 +68,15 @@ resultado.innerHTML = "";
 
         case "habilidades":
 
+            if(ide2.value === ""){
+                let pokedex = await obtenerlistahabilidades();
+                let pokemones = pokedex.results.map(p => `<p>Nombre: ${p.name}</p>`).join("");
+                resultado.innerHTML = pokemones;
+            }else{
+                let habilidad = await obtenerhabilidad(ide2.value);
+                resultado.innerHTML =`<div><strong>${habilidad.name}:</strong><span>${habilidad.generation.name}</span></div>`;
+            }
+
         break;
 
         case "tipos":
