@@ -30,8 +30,6 @@ document.getElementById("busqueda").addEventListener("input", function (e) {
 
 async function obtenerpeliculas() {
 
-    let llamada = [];
-
     try {
 
         for (let i = 1; i <= 10; i++) {

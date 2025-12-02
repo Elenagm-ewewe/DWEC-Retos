@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poke-ejercicio</title>
+
+    <style>
+        .caja{
+            background-color: beige;
+            margin: 2em;
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="caja">
+    <form id="formulario" novalidate>
+
+        <label>ID:</label><br>
+        <input type="text" id="ide" pattern="^\d{1,3}$"><span id="error"></span><br>
+
+        <button type="submit">Buscar pokémon</button>
+    </form>
+
+<div class="caja"></div>
+</div>
+
+    <span id="pokeerror"></span>
+
+    <div id="pokemon"></div>
+
+<div class="caja">
+
+    <form novalidate id="formulario2">
+
+        <label>Tipo de dato</label>
+        <select id="dato">
+            <option value="pokemon">Pokémon</option>
+            <option value="habilidades">Habilidades</option>
+            <option value="tipos">Tipos</option>
+        </select>
+        <br>
+        <label>ID:</label>
+        <input type="text" id="nombre" pattern="^\d{1,3}$"><span id="error"></span><br>
+    
+    <br>
+    <button type="submit">Mostrar informacion</button>
+    </form>
+</div>
+
+<div id="resultado"></div>
+
+    <script src="reto4.js"></script>
+</body>
+</html>
