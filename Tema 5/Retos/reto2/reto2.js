@@ -19,10 +19,11 @@ document.getElementById("busqueda").addEventListener("input", function (e) {
 
     let encontradas = peliculas.filter(p => p.Title.toLowerCase().includes(busqueda.toLowerCase()))
 
-    let html = encontradas.map((p) => `<div class="peli"><img src="${p.Poster}"> <h3>${p.Title}</h3> </div>`).join("");
+    let html = encontradas.map((p) => `<div><img src="${p.Poster}"> <h3>${p.Title}</h3> </div>`).join("");
 
     document.getElementById("peliculas").innerHTML = html
 
+    document.getElementById("peliculas").classList.add("peli")
 });
 
 
