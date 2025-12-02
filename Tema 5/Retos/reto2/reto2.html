@@ -1,71 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reto 2</title>
 
     <style>
-      body {
-        background-color: rgb(26, 25, 25);
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      }
+        body {
+            background-color: rgb(26, 25, 25);
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+                sans-serif;
+        }
 
-      header {
-        display: flex;
-        color: white;
-        margin-left: 6em;
-      }
+        h1, h3{
+            margin: 0.5em;
+        }
 
-      input {
-        margin: 0.5em;
-      }
+        header {
+            height: 3em;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            margin-left: 6em;
+            margin-right: 6em;
+            justify-content: space-between;
+        }
 
-      .peliculas {
-        width: 100vw;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-      }
+        input {
+            margin: 0.5em;
+            border-radius: 10px;
+        }
 
-      .peli {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(14, 13, 13);
-        width: 300px;
-        padding: 1em;
-        color: white;
-        border-radius: 10px;
-        flex-wrap: wrap;
-        margin: 0.7em;
-      }
+        .peliculas {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
 
-      .peli:hover{
-        scale: 1.05;
-        transition: 0.5s;
-      }
+        .peli {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(14, 13, 13);
+            width: 300px;
+            padding: 1em;
+            color: white;
+            border-radius: 10px;
+            flex-wrap: wrap;
+            margin: 0.7em;
+        }
 
-      .peli img{
-        width: 270px;
-        height: 400px;
-        object-fit: cover;
-      }
+        .peli:hover {
+            scale: 1.05;
+            transition: 0.5s;
+        }
+
+        .peli img {
+            width: 270px;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .buscador{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
 
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      <h3>Búsqueda por película</h3>
-      <input id="busqueda" />
+
+        <h1>Reto 1</h1>
+
+        <div class="buscador">
+        <h3>Búsqueda por película</h3>
+        <input id="busqueda" />
+        </div>
     </header>
 
     <main>
-      <div id="peliculas" class="peliculas"></div>
+        <div id="peliculas" class="peliculas"></div>
     </main>
 
     <script src="reto2.js"></script>
-  </body>
+</body>
+
 </html>
