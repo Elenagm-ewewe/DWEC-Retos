@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto 3</title>
+
+    <style>
+        form{
+            margin: 2em;
+            width: fit-content;
+            background-color: rgb(243, 241, 238);
+            padding: 0.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <form novalidate id="formulario">
+
+        <label>ID:</label>
+        <br>
+        <input type="text" required pattern="^\d{1,2}$"><span id="errorid"></span>
+    </br>
+        <button type="submit">Enviar</button>
+    </form>
+
+
+
+
+    <script src="reto3.js"></script>
+    
+
+
+<form id="formulario2" novalidate>
+
+    <label>Tipo:</label>
+    <select id="tipo">
+        <option value="people">Personas</option>
+        <option value="films">Películas</option>
+        <option value="planets">Planetas</option>
+        <option value="starships">Naves</option>
+        <option value="species">Especies</option>
+
+    </select>
+    <br>
+            <label>ID:</label>
+            <input type="text" id="idbuscar">
+
+            <br>
+
+<button type="submit">Enviar</button>
+</form>
+
+<div id="dato"></div>
+
+</body>
+</html>
